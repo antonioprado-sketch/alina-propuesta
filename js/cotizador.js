@@ -266,11 +266,27 @@ function selectPackage(paquete_id) {
     cotizador_state.paquete_seleccionado = paquete_id;
     cotizador_state.servicios_adicionales = [];
     cotizador_state.meses = PRICING_CONFIG.paquetes[paquete_id].minimo_meses;
-    
+
     document.getElementById('meses-input').value = cotizador_state.meses;
   }
-  
+
+  // Mantener sincronizado el <select> del cotizador, incluso cuando
+  // selectPackage() se llama desde afuera (botones de las tarjetas de precio)
+  const select = document.getElementById('paquete-select');
+  if (select) select.value = paquete_id || '';
+
   actualizarTotal();
+}
+
+/**
+ * Elegir un paquete desde las tarjetas de precio: aplica la selección en el
+ * cotizador y lo lleva a la vista para que el cambio de precio sea visible
+ */
+function elegirPaquete(paquete_id) {
+  selectPackage(paquete_id);
+
+  const cotizador = document.getElementById('cotizador');
+  if (cotizador) cotizador.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 /**
@@ -407,6 +423,7 @@ function copiarCotizacion() {
 
 // Exportar para uso global
 window.selectPackage = selectPackage;
+window.elegirPaquete = elegirPaquete;
 window.cambiarMeses = cambiarMeses;
 window.openWhatsApp = openWhatsApp;
 window.copiarCotizacion = copiarCotizacion;
