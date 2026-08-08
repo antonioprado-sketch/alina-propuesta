@@ -1,0 +1,25 @@
+{
+  "_notas": "Config publicado del sitio. Editable a mano o vía panel admin (descargar y commitear). Los campos ausentes usan el default de js/cotizador.js y js/admin.js.",
+
+  "paquetes": {
+    "basico": {
+      "precio_mensual": 4500,
+      "minimo_meses": 12
+    },
+    "profesional": {
+      "precio_mensual": 12000,
+      "minimo_meses": 3
+    },
+    "premium": {
+      "precio_mensual": 25000,
+      "minimo_meses": 3
+    }
+  },
+
+  "contenido": {
+    "hero-title": "Soluciones digitales que impulsan tu negocio",
+    "hero-desc": "Desarrollamos plataformas, aplicaciones y soluciones tecnológicas que generan valor real para tu empresa. Automatización inteligente + Marketing estratégico + Identidad visual premium.",
+    "cta-title": "¿Listo para transformar tu negocio?",
+    "cta-desc": "Solicita una propuesta personalizada sin compromiso. Analizamos tu situación y diseñamos la solución ideal."
+  }
+}

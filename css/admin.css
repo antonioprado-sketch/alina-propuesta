@@ -1,0 +1,179 @@
+/**
+ * ADDV — Panel Administrativo
+ * Estilos propios de login.html y admin.html (no afectan la landing page)
+ */
+
+/* ===== SHELL DE LOGIN ===== */
+
+.admin-login-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-gray-50);
+  padding: var(--space-lg);
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.admin-login-logo {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-navy);
+  font-size: var(--font-size-xl);
+}
+
+/* ===== SHELL DE ADMIN ===== */
+
+.admin-shell {
+  min-height: 100vh;
+  background-color: var(--color-gray-50);
+}
+
+.admin-topbar {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  padding: var(--space-md) var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.admin-topbar strong {
+  font-family: var(--font-display);
+}
+
+.admin-main {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  padding: var(--space-xl);
+}
+
+.admin-tabs {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--color-gray-200);
+  flex-wrap: wrap;
+}
+
+.admin-tab {
+  background: none;
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-600);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.admin-tab:hover {
+  color: var(--color-navy);
+}
+
+.admin-tab.active {
+  color: var(--color-navy);
+  border-bottom-color: var(--color-cyan);
+}
+
+.admin-panel {
+  display: none;
+}
+
+.admin-panel.active {
+  display: block;
+}
+
+.admin-package-block {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.admin-package-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.admin-fields-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+}
+
+.admin-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.admin-stat-tile {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.admin-stat-tile .admin-stat-value {
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-navy);
+  display: block;
+}
+
+.admin-stat-tile .admin-stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-600);
+}
+
+.admin-log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.admin-log-table th,
+.admin-log-table td {
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.admin-log-table th {
+  color: var(--color-gray-600);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+}
+
+.admin-empty-state {
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
+  padding: var(--space-lg) 0;
+}
+
+.admin-save-bar {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  margin-top: var(--space-lg);
+}
+
+.admin-save-msg {
+  font-size: var(--font-size-sm);
+  color: var(--color-success);
+}

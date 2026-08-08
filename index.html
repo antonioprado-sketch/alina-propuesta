@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ADDV - Propuesta Comercial Integral: Automatización, Marketing Digital, Branding para Consultorios Psicológicos Online.">
+  <meta name="theme-color" content="#1a3a5e">
+  
+  <title>ADDV — Propuesta Comercial Integral | Automatización + Marketing + Branding</title>
+  
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%231a3a5e'>A</text></svg>">
+  
+  <!-- Open Graph (para compartir) -->
+  <meta property="og:title" content="ADDV — Propuesta Comercial Integral">
+  <meta property="og:description" content="Transformación Digital para Consultorios Psicológicos: Automatización, Marketing, Branding.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://addv.mx/propuesta">
+  <meta property="og:image" content="https://addv.mx/og-image.png">
+  
+  <!-- Preconnect para performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+  <!-- ===== SPRITE DE ICONOS (inline, sin dependencias externas) ===== -->
+  <svg class="icon-sprite" aria-hidden="true" style="display: none;">
+    <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/>
+      <path d="M9 12l2.2 2.2L15.5 9.5"/>
+    </symbol>
+    <symbol id="icon-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="12" cy="12" r="0.6" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 18h10a4 4 0 0 0 0-8 5.5 5.5 0 0 0-10.5-1.5A4.5 4.5 0 0 0 7 18z"/>
+    </symbol>
+    <symbol id="icon-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3c2.5 1.5 4 4.2 4 8 0 2-1 4-1 4H9s-1-2-1-4c0-3.8 1.5-6.5 4-8z"/>
+      <circle cx="12" cy="9" r="1.4"/>
+      <path d="M9 15l-2.5 4M15 15l2.5 4M10 19h4"/>
+    </symbol>
+    <symbol id="icon-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="12" rx="1.5"/>
+      <path d="M8 20h8M12 16v4"/>
+    </symbol>
+    <symbol id="icon-diamond" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 9l6-6 6 6-6 11-6-11z"/>
+      <path d="M6 9h12M9.5 3.5L8 9l4 11 4-11-1.5-5.5"/>
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12h14M13 6l6 6-6 6"/>
+    </symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 5h16v10H9l-4 4V5z"/>
+      <path d="M8 9h8M8 12h5"/>
+    </symbol>
+    <symbol id="icon-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M13 3L6 14h5l-1 7 7-11h-5l1-7z"/>
+    </symbol>
+    <symbol id="icon-megaphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 10v4h3l6 4V6L6 10H3z"/>
+      <path d="M15 9a4 4 0 0 1 0 6M18 6a7.5 7.5 0 0 1 0 12"/>
+    </symbol>
+    <symbol id="icon-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3a9 8 0 1 0 0 16c1.5 0 2-1 2-2s-.5-1.5-.5-2.3c0-1 .8-1.7 1.8-1.7H17a4 4 0 0 0 4-4c0-3.3-4-6-9-6z"/>
+      <circle cx="8" cy="11" r="1" fill="currentColor" stroke="none"/>
+      <circle cx="11" cy="8" r="1" fill="currentColor" stroke="none"/>
+      <circle cx="15" cy="9" r="1" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="icon-file-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/>
+      <path d="M12 11l2.5 1v2.3c0 1.6-1 2.7-2.5 3.2-1.5-.5-2.5-1.6-2.5-3.2V12l2.5-1z"/>
+    </symbol>
+    <symbol id="icon-check-square" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="4" width="16" height="16" rx="3"/>
+      <path d="M8.5 12.5l2.2 2.2L16 9.5"/>
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M4.5 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3 9h3v12H3zM9.5 9H12.4v1.6h.05c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.15 2.1 4.15 4.9V21h-3v-6.2c0-1.5-.03-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21h-3z"/>
+    </symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M14 21v-7h2.5l.5-3H14V9c0-.9.3-1.5 1.7-1.5H17V4.8C16.6 4.7 15.5 4.6 14.3 4.6c-2.5 0-4.3 1.5-4.3 4.3V11H7.5v3H10v7z"/>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17" cy="7" r="0.6" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a1.5 1.5 0 0 1-1.6 1.5A15 15 0 0 1 4.5 5.6 1.5 1.5 0 0 1 6 4z"/>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.5" y="5" width="17" height="14" rx="2"/>
+      <path d="M4.5 6.5L12 12.5l7.5-6"/>
+    </symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.5"/>
+      <path d="M3.5 12h17M12 3.5c2.2 2.3 3.3 5.3 3.3 8.5s-1.1 6.2-3.3 8.5c-2.2-2.3-3.3-5.3-3.3-8.5S9.8 5.8 12 3.5z"/>
+    </symbol>
+  </svg>
+
+  <!-- ===== HEADER FIJO ===== -->
+  <header class="header" role="banner">
+    <div class="header-content container">
+      <a href="#" class="header-logo" aria-label="ADDV - Inicio">
+        <span class="header-logo-mark">ADD<span class="header-logo-accent">V</span></span>
+        <span class="header-logo-tagline">Agile Development and Design + Value</span>
+      </a>
+      <div class="header-nav">
+        <a href="#cotizador" class="header-nav-link">Propuesta Comercial</a>
+      </div>
+      <div class="header-actions">
+        <a href="#cotizador" class="btn btn-primary header-cta">
+          Enviar solicitud
+          <svg aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="section section-hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero">
+          <!-- Contenido izquierdo -->
+          <div class="hero-content">
+            <h1 id="hero-title" data-content-key="hero-title">Soluciones digitales que <span class="text-accent-on-light">impulsan</span> tu negocio</h1>
+
+            <p data-content-key="hero-desc">Desarrollamos plataformas, aplicaciones y soluciones tecnológicas que generan valor real para tu empresa. Automatización inteligente + Marketing estratégico + Identidad visual premium.</p>
+            
+            <div class="hero-badges">
+              <div class="hero-badge">
+                <span class="hero-badge-icon"><svg aria-hidden="true"><use href="#icon-shield"/></svg></span>
+                <span class="hero-badge-label">Tecnología<br>con propósito</span>
+              </div>
+              <div class="hero-badge">
+                <span class="hero-badge-icon"><svg aria-hidden="true"><use href="#icon-target"/></svg></span>
+                <span class="hero-badge-label">Soluciones<br>a la medida</span>
+              </div>
+              <div class="hero-badge">
+                <span class="hero-badge-icon"><svg aria-hidden="true"><use href="#icon-cloud"/></svg></span>
+                <span class="hero-badge-label">Acompañamiento<br>directo</span>
+              </div>
+            </div>
+
+            <a href="#paquetes" class="btn btn-primary btn-lg">Ver Paquetes</a>
+          </div>
+
+          <!-- Composición visual derecha -->
+          <div class="hero-visual" aria-hidden="true">
+            <img class="hero-illustration" src="img/hero-illustration.png" alt="" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DIAGNÓSTICO ===== -->
+    <section class="section" id="diagnostico" aria-labelledby="diagnostico-title">
+      <div class="container">
+        <h2 id="diagnostico-title" class="section-title-dashed" style="text-align: center;">Diagnóstico</h2>
+        <p class="diagnostico-intro">La demanda de salud mental en México crece 8.9% anual y el 36% de la población reporta afectación (Observatorio Mexicano de Salud Mental y Adicciones). La demanda existe — esto es lo que hoy le impide a tu consultorio capturarla, y cómo lo resolvemos.</p>
+
+        <div class="diagnostico-grid">
+          <div class="diagnostico-item">
+            <div class="diagnostico-problema">
+              <span class="badge badge-warning diagnostico-tag">Hoy</span>
+              <p>Agendas citas y controlas pagos de forma manual o mental. Calendario personal y profesional mezclados, y sin política de cancelación clara pierdes horas por citas canceladas de último momento.</p>
+            </div>
+            <span class="diagnostico-arrow" aria-hidden="true"><svg><use href="#icon-arrow-right"/></svg></span>
+            <div class="diagnostico-solucion">
+              <span class="badge badge-success diagnostico-tag">Con ADDV</span>
+              <p>Bot de WhatsApp que agenda solo y filtra consultas no serias, Google Calendar separado solo para consulta, y Stripe con cobros recurrentes y control de paquetes de sesiones.</p>
+            </div>
+          </div>
+
+          <div class="diagnostico-item">
+            <div class="diagnostico-problema">
+              <span class="badge badge-warning diagnostico-tag">Hoy</span>
+              <p>Publicas en TikTok sin estrategia ni embudo medible. Te cuesta aparecer en cámara y no hay forma de saber cuántos seguidores se convierten en pacientes reales.</p>
+            </div>
+            <span class="diagnostico-arrow" aria-hidden="true"><svg><use href="#icon-arrow-right"/></svg></span>
+            <div class="diagnostico-solucion">
+              <span class="badge badge-success diagnostico-tag">Con ADDV</span>
+              <p>Contenido educativo validado por ti, formatos naturales (estilo podcast) que reducen la pena de cámara, y embudo de 3 fases con meta de 3 pacientes por cada 100 vistas, medido cada 30 días.</p>
+            </div>
+          </div>
+
+          <div class="diagnostico-item">
+            <div class="diagnostico-problema">
+              <span class="badge badge-warning diagnostico-tag">Hoy</span>
+              <p>Tu logo y paleta de color son de 2020 y ya no reflejan tu estilo actual. El material que envías a pacientes y publicas en redes no tiene una línea visual uniforme.</p>
+            </div>
+            <span class="diagnostico-arrow" aria-hidden="true"><svg><use href="#icon-arrow-right"/></svg></span>
+            <div class="diagnostico-solucion">
+              <span class="badge badge-success diagnostico-tag">Con ADDV</span>
+              <p>Rediseño de logo y paleta, brand book y templates listos para redes sociales y para enviar por WhatsApp directo a tus pacientes.</p>
+            </div>
+          </div>
+
+          <div class="diagnostico-item">
+            <div class="diagnostico-problema">
+              <span class="badge badge-warning diagnostico-tag">Hoy</span>
+              <p>Notas de pacientes dispersas entre app de notas, hojas de cálculo y papel. Sin proceso definido, con riesgo real de perder información clínica.</p>
+            </div>
+            <span class="diagnostico-arrow" aria-hidden="true"><svg><use href="#icon-arrow-right"/></svg></span>
+            <div class="diagnostico-solucion">
+              <span class="badge badge-success diagnostico-tag">Con ADDV</span>
+              <p>Plataforma segura con historial, notas y seguimiento por paciente, backup automático y conforme a LFPDPPP.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PAQUETES SECTION ===== -->
+    <section class="section section-alt" id="paquetes" aria-labelledby="paquetes-title">
+      <div class="container">
+        <h2 id="paquetes-title" class="section-title-dashed" style="text-align: center;">Paquetes Comerciales</h2>
+        <p style="text-align: center; color: var(--color-gray-600); margin-bottom: var(--space-3xl);">Elige el paquete que mejor se adapte a las necesidades de tu consultorio.</p>
+
+        <div class="pricing-cards">
+          <!-- Paquete Básico -->
+          <div class="pricing-card">
+            <div class="card">
+              <div class="pricing-icon"><svg aria-hidden="true"><use href="#icon-rocket"/></svg></div>
+
+              <div class="pricing-header">
+                <h3 class="pricing-name">Básico</h3>
+                <p class="pricing-subtitle">Para iniciar</p>
+                <h4 class="pricing-price" data-price-for="basico">$4,500<span style="font-size: 0.5em;">/mes</span></h4>
+                <p class="pricing-price-desc">Mínimo 12 meses</p>
+              </div>
+
+              <div class="pricing-features">
+                <div class="pricing-feature">Bot WhatsApp básico</div>
+                <div class="pricing-feature">Google Calendar dual</div>
+                <div class="pricing-feature">Stripe integrado</div>
+                <div class="pricing-feature">Identidad visual (logo + brand book)</div>
+                <div class="pricing-feature">Onboarding 2 semanas</div>
+              </div>
+
+              <div class="pricing-cta">
+                <button class="btn btn-secondary btn-full" onclick="selectPackage('basico')">Elegir Básico <svg aria-hidden="true" style="width:16px;height:16px;"><use href="#icon-arrow-right"/></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paquete Profesional (Featured) -->
+          <div class="pricing-card featured">
+            <div class="card">
+              <span class="badge badge-accent-solid pricing-badge-float">⭐ MÁS POPULAR</span>
+
+              <div class="pricing-icon"><svg aria-hidden="true"><use href="#icon-monitor"/></svg></div>
+
+              <div class="pricing-header">
+                <h3 class="pricing-name pricing-name-dashed">Profesional</h3>
+                <p class="pricing-subtitle">Transformación Completa</p>
+                <h4 class="pricing-price" data-price-for="profesional">$12,000<span style="font-size: 0.5em;">/mes</span></h4>
+                <p class="pricing-price-desc">Mínimo 3 meses (renovable)</p>
+              </div>
+
+              <div class="pricing-features">
+                <div class="pricing-feature">Todo lo anterior +</div>
+                <div class="pricing-feature">Bot WhatsApp avanzado con segmentación</div>
+                <div class="pricing-feature">Expediente clínico seguro (LFPDPPP)</div>
+                <div class="pricing-feature">Templates para redes + Branding</div>
+                <div class="pricing-feature">Estrategia 3 embudos de marketing</div>
+                <div class="pricing-feature">Community Manager (20h/mes)</div>
+                <div class="pricing-feature">Meta Ads setup + optimización</div>
+                <div class="pricing-feature">Acompañamiento 30 días</div>
+              </div>
+
+              <div class="pricing-cta">
+                <button class="btn btn-accent btn-full" onclick="selectPackage('profesional')">Elegir Profesional <svg aria-hidden="true" style="width:16px;height:16px;"><use href="#icon-arrow-right"/></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paquete Premium -->
+          <div class="pricing-card">
+            <div class="card">
+              <div class="pricing-icon"><svg aria-hidden="true"><use href="#icon-diamond"/></svg></div>
+
+              <div class="pricing-header">
+                <h3 class="pricing-name">Premium</h3>
+                <p class="pricing-subtitle">Transformación Acelerada</p>
+                <h4 class="pricing-price" data-price-for="premium">$25,000<span style="font-size: 0.5em;">/mes</span></h4>
+                <p class="pricing-price-desc">Mínimo 3 meses</p>
+              </div>
+
+              <div class="pricing-features">
+                <div class="pricing-feature">Máximo crecimiento + inversión premium</div>
+                <div class="pricing-feature">Community Manager (40h/mes)</div>
+                <div class="pricing-feature">Producción de video profesional</div>
+                <div class="pricing-feature">Google Ads + SEO Local</div>
+                <div class="pricing-feature">Email marketing automatizado</div>
+                <div class="pricing-feature">Portal del paciente + referral program</div>
+                <div class="pricing-feature">Acompañamiento bi-semanal continuo</div>
+                <div class="pricing-feature">Revisión estratégica trimestral</div>
+              </div>
+
+              <div class="pricing-cta">
+                <button class="btn btn-secondary btn-full" onclick="selectPackage('premium')">Elegir Premium <svg aria-hidden="true" style="width:16px;height:16px;"><use href="#icon-arrow-right"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Advertencia Bajo Demanda -->
+        <div class="alert alert-warning mt-2xl" role="alert" style="max-width: 800px; margin: var(--space-3xl) auto 0;">
+          <div class="alert-icon">⚠️</div>
+          <div class="alert-content">
+            <strong>Opción Bajo Demanda disponible:</strong> Puedes seleccionar módulos individuales, pero recomendamos fuertemente los paquetes integrados para aprovechar sinergias y maximizar resultados. Los módulos sueltos rinden 50% menos sin la sinergia de la transformación completa.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICIOS UPSCALE SECTION ===== -->
+    <section class="section" id="servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <div class="services-grid">
+          <div class="services-list-col">
+            <h2 id="servicios-title">Servicios Upscale</h2>
+            <p class="services-intro">Lleva tu consultorio al siguiente nivel con automatización, marketing y tecnología de alto impacto.</p>
+
+            <div class="services-list">
+              <div class="service-item">
+                <span class="service-icon"><svg aria-hidden="true"><use href="#icon-bolt"/></svg></span>
+                <div>
+                  <h3 class="service-name">Automatización Inteligente</h3>
+                  <p class="service-desc">Bot WhatsApp, Calendarios, Pagos Stripe, Expediente Clínico conforme a LFPDPPP. Ahorra 8+ horas semanales.</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <span class="service-icon"><svg aria-hidden="true"><use href="#icon-megaphone"/></svg></span>
+                <div>
+                  <h3 class="service-name">Marketing Digital Estratégico</h3>
+                  <p class="service-desc">3 embudos segmentados, Community Manager, Meta Ads, Google Ads, SEO Local. Tasa de conversión +67%.</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <span class="service-icon"><svg aria-hidden="true"><use href="#icon-palette"/></svg></span>
+                <div>
+                  <h3 class="service-name">Identidad Visual Premium</h3>
+                  <p class="service-desc">Logo rediseño, Brand Book, Templates para redes, Messaging de privacidad. Diferenciación 40%+.</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <span class="service-icon"><svg aria-hidden="true"><use href="#icon-file-shield"/></svg></span>
+                <div>
+                  <h3 class="service-name">Expediente Clínico Seguro</h3>
+                  <p class="service-desc">Plataforma web con historial, notas, tareas, backup automático. Conforme a LFPDPPP.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#cotizador" class="btn btn-primary service-cta">Conocer más</a>
+          </div>
+
+          <div class="services-visual" aria-hidden="true">
+            <img class="services-visual-img services-visual-img-framed" src="img/servicios-upscale.png" alt="" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICIOS A GRANEL ===== -->
+    <section class="section section-alt" aria-labelledby="servicios-granel-title">
+      <div class="container">
+        <div class="services-grid">
+          <div class="services-list-col">
+            <h2 id="servicios-granel-title">Servicios a Granel</h2>
+            <p class="services-intro">Soluciones por demanda para cubrir tareas específicas de tu consultorio, cuando las necesites.</p>
+
+            <div class="service-checklist">
+              <div class="service-checklist-item">
+                <svg class="service-checklist-icon" aria-hidden="true"><use href="#icon-check-square"/></svg>
+                <span><strong>Landing Pages</strong> — Diseño + desarrollo optimizado, CRO incluido</span>
+              </div>
+              <div class="service-checklist-item">
+                <svg class="service-checklist-icon" aria-hidden="true"><use href="#icon-check-square"/></svg>
+                <span><strong>Email Marketing</strong> — Secuencias automáticas, nutrición de leads</span>
+              </div>
+              <div class="service-checklist-item">
+                <svg class="service-checklist-icon" aria-hidden="true"><use href="#icon-check-square"/></svg>
+                <span><strong>Portal del Paciente</strong> — Ejercicios, tareas, chat seguro con profesional</span>
+              </div>
+              <div class="service-checklist-item">
+                <svg class="service-checklist-icon" aria-hidden="true"><use href="#icon-check-square"/></svg>
+                <span><strong>Referral Program</strong> — Sistema de recomendaciones automático</span>
+              </div>
+              <div class="service-checklist-item">
+                <svg class="service-checklist-icon" aria-hidden="true"><use href="#icon-check-square"/></svg>
+                <span><strong>Auditoría de Compliance</strong> — LFPDPPP, INAI, privacidad verificada</span>
+              </div>
+              <div class="service-checklist-item">
+                <svg class="service-checklist-icon" aria-hidden="true"><use href="#icon-check-square"/></svg>
+                <span><strong>Acompañamiento</strong> — Mentorías, optimización, evolución continua</span>
+              </div>
+              <div class="service-checklist-item">
+                <svg class="service-checklist-icon" aria-hidden="true"><use href="#icon-check-square"/></svg>
+                <span><strong>Análisis de KPIs</strong> — Reportes mensuales, recomendaciones basadas en datos</span>
+              </div>
+              <div class="service-checklist-item">
+                <svg class="service-checklist-icon" aria-hidden="true"><use href="#icon-check-square"/></svg>
+                <span><strong>Integraciones</strong> — Stripe, Google, Meta, webhooks, APIs</span>
+              </div>
+            </div>
+
+            <a href="#cotizador" class="btn btn-secondary service-cta">Ver servicios a granel</a>
+          </div>
+
+          <div class="services-visual" aria-hidden="true">
+            <img class="services-visual-img" src="img/servicios-granel.png" alt="" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COTIZADOR INTERACTIVO ===== -->
+    <section class="section" id="cotizador" aria-labelledby="cotizador-title">
+      <div class="container container-lg">
+        <h2 id="cotizador-title" style="text-align: center; margin-bottom: var(--space-2xl);">Calculadora Interactiva</h2>
+        
+        <div class="card" style="max-width: 600px; margin: 0 auto;">
+          <div class="card-header">
+            <h3>Personaliza tu cotización</h3>
+            <p style="margin: var(--space-sm) 0 0; color: var(--color-gray-600); font-size: var(--font-size-sm);">Selecciona paquete o módulos individuales</p>
+          </div>
+          
+          <div class="card-body">
+            <!-- Inputs del cotizador van aquí (JavaScript) -->
+            <div id="cotizador-contenido">
+              <!-- Generado por JavaScript -->
+            </div>
+          </div>
+          
+          <div class="card-footer">
+            <div>
+              <p style="margin: 0; font-size: var(--font-size-sm); color: var(--color-gray-600);">Total:</p>
+              <h3 id="total-precio" style="margin: var(--space-sm) 0 0; color: var(--color-cyan);">$0.00 MXN</h3>
+              <p style="margin: var(--space-xs) 0 0; font-size: 0.75rem; color: var(--color-gray-600);">(IVA 16% separado)</p>
+            </div>
+            <button class="btn btn-primary" id="btn-whatsapp" onclick="openWhatsApp()">
+              Enviar por WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="cta-section">
+      <div class="cta-content cta-bar">
+        <span class="cta-bar-icon"><svg aria-hidden="true"><use href="#icon-chat"/></svg></span>
+        <div class="cta-bar-text">
+          <h2 data-content-key="cta-title">¿Listo para transformar tu negocio?</h2>
+          <p data-content-key="cta-desc">Solicita una propuesta personalizada sin compromiso. Analizamos tu situación y diseñamos la solución ideal.</p>
+        </div>
+        <div class="cta-buttons">
+          <a href="#paquetes" class="btn btn-accent btn-lg">Ver Paquetes</a>
+          <button class="btn btn-accent btn-lg" onclick="openWhatsApp()">Contactar por WhatsApp</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-section-brand">
+          <a href="#" class="header-logo" aria-label="ADDV - Inicio" style="color: var(--color-white);">
+            <span class="header-logo-mark">ADD<span class="header-logo-accent">V</span></span>
+          </a>
+          <p style="font-size: var(--font-size-sm); color: rgba(255, 255, 255, 0.7); margin: var(--space-sm) 0 var(--space-md);">Agile Development and Design + Value. Transformamos ideas en soluciones digitales que generan valor real.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn"><svg aria-hidden="true"><use href="#icon-linkedin"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg aria-hidden="true"><use href="#icon-facebook"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg aria-hidden="true"><use href="#icon-instagram"/></svg></a>
+            <a href="https://wa.me/525539944697" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
+                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.2 10.3 77.4 29.8 111L2 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-69.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-70 18.4L71 359.5l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.7-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.6-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.6-9.7-1.5-2.8-6.6-16-12.1-27.6-4.4-9.2-9-8.9-13.4-9.1-3.7-.2-7.9-.2-12.1-.2-4.2 0-11 1.6-16.9 7.8-5.9 6.2-22.6 22.1-22.6 53.9 0 31.8 24.4 62.5 27.8 66.9 3.4 4.4 47 71.8 115.4 97.8 57.4 21.3 68.9 17.1 81.4 16 12.5-1.1 40.3-16.5 46-32.4 5.7-15.9 5.7-29.6 4-32.4-1.7-2.8-6.3-4.5-13.1-7.9z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Enlaces</h4>
+          <div class="footer-links">
+            <a href="#diagnostico">Diagnóstico</a>
+            <a href="#paquetes">Paquetes</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#cotizador">Cotizador</a>
+            <a href="login.html">Admin Panel</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Servicios</h4>
+          <div class="footer-links">
+            <a href="#servicios">Automatización</a>
+            <a href="#servicios">Marketing Digital</a>
+            <a href="#servicios">Identidad Visual</a>
+            <a href="#servicios">Expediente Clínico</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <div class="footer-links">
+            <a href="#">Privacidad</a>
+            <a href="#">Términos</a>
+            <a href="#">Cookies</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Hablemos</h4>
+          <div class="footer-links footer-links-icon">
+            <a href="tel:+525539944697"><svg aria-hidden="true"><use href="#icon-phone"/></svg> +52 55 3994 4697</a>
+            <a href="mailto:info@addv.mx"><svg aria-hidden="true"><use href="#icon-mail"/></svg> info@addv.mx</a>
+            <a href="https://wa.me/525539944697" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#icon-globe"/></svg> www.addv.mx</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ADDV. Todos los derechos reservados.</p>
+        <p>Automatización, Marketing y Diseño para consultorios de salud mental</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="js/cotizador.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

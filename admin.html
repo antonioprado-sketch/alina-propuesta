@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Panel Admin — ADDV</title>
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/admin.css">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%231a3a5e'>A</text></svg>">
+
+  <script src="js/admin-auth.js"></script>
+  <script>
+    // Guard antes de pintar contenido: sin sesión válida, fuera.
+    exigirSesionAdmin();
+  </script>
+</head>
+<body>
+  <div class="admin-shell">
+    <header class="admin-topbar">
+      <strong>ADDV — Panel Admin</strong>
+      <div style="display: flex; gap: var(--space-md); align-items: center;">
+        <a href="index.html" class="btn-ghost" style="color: var(--color-white);">Ver landing</a>
+        <button class="btn btn-primary btn-sm" id="btn-descargar-config">Descargar config.json</button>
+        <button class="btn btn-secondary btn-sm" id="btn-logout" style="border-color: var(--color-white); color: var(--color-white);">Cerrar sesión</button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <div class="alert alert-warning" role="note">
+        <div class="alert-icon">⚠️</div>
+        <div class="alert-content">
+          "Guardar" solo actualiza una <strong>vista previa en este navegador</strong> (localStorage) — no publica nada en el sitio real (GitHub Pages no tiene backend). Para publicar de verdad: edita precios/contenido, dale <strong>"Descargar config.json"</strong> arriba, y sube ese archivo a <code>data/config.json</code> en el repo (commit + push). Los analytics son un log local de esta sesión, no tráfico agregado real.
+        </div>
+      </div>
+
+      <nav class="admin-tabs" role="tablist">
+        <button class="admin-tab active" data-tab="precios" role="tab">Precios</button>
+        <button class="admin-tab" data-tab="contenido" role="tab">Contenido</button>
+        <button class="admin-tab" data-tab="analytics" role="tab">Analytics</button>
+      </nav>
+
+      <!-- ===== TAB PRECIOS ===== -->
+      <section class="admin-panel active" id="panel-precios">
+        <div class="card">
+          <div class="card-header">
+            <h2 style="font-size: var(--font-size-lg); margin: 0;">Editar precios de paquetes</h2>
+          </div>
+          <div class="card-body" id="precios-form-contenedor">
+            <!-- Generado por js/admin.js -->
+          </div>
+          <div class="admin-save-bar">
+            <button class="btn btn-primary" id="btn-guardar-precios">Guardar precios</button>
+            <button class="btn btn-secondary" id="btn-restaurar-precios">Restaurar valores originales</button>
+            <span class="admin-save-msg" id="precios-save-msg" style="display: none;">Guardado ✓</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TAB CONTENIDO ===== -->
+      <section class="admin-panel" id="panel-contenido">
+        <div class="card">
+          <div class="card-header">
+            <h2 style="font-size: var(--font-size-lg); margin: 0;">Editar textos de la landing</h2>
+          </div>
+          <div class="card-body" id="contenido-form-contenedor">
+            <!-- Generado por js/admin.js -->
+          </div>
+          <div class="admin-save-bar">
+            <button class="btn btn-primary" id="btn-guardar-contenido">Guardar contenido</button>
+            <button class="btn btn-secondary" id="btn-restaurar-contenido">Restaurar textos originales</button>
+            <span class="admin-save-msg" id="contenido-save-msg" style="display: none;">Guardado ✓</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TAB ANALYTICS ===== -->
+      <section class="admin-panel" id="panel-analytics">
+        <div class="admin-stat-grid" id="analytics-stats">
+          <!-- Generado por js/admin.js -->
+        </div>
+
+        <div class="card">
+          <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 style="font-size: var(--font-size-lg); margin: 0;">Últimos eventos (esta sesión y navegador)</h2>
+            <button class="btn btn-secondary btn-sm" id="btn-limpiar-analytics">Limpiar log</button>
+          </div>
+          <div class="card-body" id="analytics-log-contenedor">
+            <!-- Generado por js/admin.js -->
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/cotizador.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

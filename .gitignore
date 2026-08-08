@@ -1,0 +1,49 @@
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+.claude/
+
+# Dependencias (si en el futuro se agregan)
+node_modules/
+yarn.lock
+package-lock.json
+
+# Archivos de editor
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+
+# Archivos temporales
+*.tmp
+.tmp/
+
+# Datos sensibles
+.env
+.env.local
+.env.*.local
+
+# Build/dist (si en el futuro se minifica)
+/dist/
+/build/
+/.next/
+
+# Testing
+coverage/
+.nyc_output/
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

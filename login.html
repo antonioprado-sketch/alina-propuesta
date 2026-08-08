@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin Login — ADDV</title>
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/admin.css">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%231a3a5e'>A</text></svg>">
+</head>
+<body>
+  <main class="admin-login-shell">
+    <div class="admin-login-card card">
+      <div class="admin-login-logo">ADDV — Admin</div>
+
+      <div class="card-header">
+        <h1 style="font-size: var(--font-size-xl); margin: 0;">Iniciar sesión</h1>
+        <p style="margin: var(--space-sm) 0 0; color: var(--color-gray-600); font-size: var(--font-size-sm);">
+          Acceso al panel de precios, contenido y analytics.
+        </p>
+      </div>
+
+      <div class="card-body">
+        <form id="login-form" novalidate>
+          <div class="input-group" id="password-group">
+            <label for="password-input">Contraseña</label>
+            <input type="password" id="password-input" autocomplete="current-password" required>
+            <p class="input-error" id="login-error" style="display: none;">Contraseña incorrecta</p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Entrar</button>
+        </form>
+      </div>
+
+      <div class="alert alert-warning" role="note" style="margin: 0;">
+        <div class="alert-icon">⚠️</div>
+        <div class="alert-content">
+          Sitio estático sin backend: este acceso es un filtro local, no seguridad de producción. No ingreses información sensible real.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/admin-auth.js"></script>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const passwordInput = document.getElementById('password-input');
+      const passwordGroup = document.getElementById('password-group');
+      const errorMsg = document.getElementById('login-error');
+
+      const ok = await intentarLogin(passwordInput.value);
+
+      if (ok) {
+        window.location.href = 'admin.html';
+      } else {
+        passwordGroup.classList.add('error');
+        errorMsg.style.display = 'block';
+        passwordInput.value = '';
+        passwordInput.focus();
+      }
+    });
+
+    // Si ya hay sesión válida, saltar directo al panel
+    if (haySesionAdminValida()) {
+      window.location.href = 'admin.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,462 @@
+/**
+ * ADDV Landing Page — Base Styles
+ * Reset CSS + Tipografía Global + Estilos de elementos HTML base
+ */
+
+/* ===== IMPORT FONTS ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ===== RESET & NORMALIZE ===== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;              /* 1rem = 16px */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;      /* Scroll suave (respeta prefers-reduced-motion) */
+}
+
+/* ===== BODY ===== */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-900);
+  background-color: var(--color-white);
+  overflow-x: hidden;           /* Evita scroll horizontal accidental */
+}
+
+/* ===== HEADINGS ===== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-md);
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-lg);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-lg);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-md);
+}
+
+h4, h5, h6 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-sm);
+}
+
+/* ===== PARAGRAPH & TEXT ===== */
+
+p {
+  margin-bottom: var(--space-md);
+  color: var(--color-gray-900);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+small, .text-sm {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+}
+
+strong, .font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+em, .font-italic {
+  font-style: italic;
+}
+
+/* ===== LINKS ===== */
+
+a {
+  color: var(--color-cyan);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  font-weight: var(--font-weight-medium);
+}
+
+a:hover {
+  color: var(--color-navy);
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ===== LISTS ===== */
+
+ul, ol {
+  margin-bottom: var(--space-md);
+  margin-left: var(--space-lg);
+}
+
+li {
+  margin-bottom: var(--space-sm);
+  line-height: var(--line-height-normal);
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== CODE & PREFORMATTED ===== */
+
+code, pre {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-md);
+  color: var(--color-gray-900);
+}
+
+code {
+  padding: var(--space-xs) var(--space-sm);
+  display: inline-block;
+  margin: 0 var(--space-xs);
+}
+
+pre {
+  padding: var(--space-md);
+  overflow-x: auto;
+  margin-bottom: var(--space-md);
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+/* ===== FORM ELEMENTS ===== */
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+  transition: border-color var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-cyan);
+  box-shadow: 0 0 0 3px var(--color-cyan-10);
+}
+
+input[type="text"]:disabled,
+input[type="email"]:disabled,
+select:disabled,
+textarea:disabled {
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-600);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ===== BUTTONS ===== */
+
+button,
+.button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  padding: var(--space-sm) var(--space-md);
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  white-space: nowrap;
+  user-select: none;
+}
+
+button:disabled,
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Variantes de botones definidas en components.css */
+
+/* ===== IMAGES ===== */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== TABLES ===== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-lg);
+  border-spacing: 0;
+}
+
+thead {
+  background-color: var(--color-gray-100);
+}
+
+th {
+  padding: var(--space-md);
+  text-align: left;
+  font-weight: var(--font-weight-semibold);
+  border-bottom: 2px solid var(--color-gray-200);
+  color: var(--color-gray-900);
+}
+
+td {
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+tbody tr:hover {
+  background-color: var(--color-gray-50);
+}
+
+/* ===== BLOCKQUOTE ===== */
+
+blockquote {
+  border-left: 4px solid var(--color-cyan);
+  padding-left: var(--space-lg);
+  margin-left: 0;
+  margin-bottom: var(--space-lg);
+  font-style: italic;
+  color: var(--color-gray-600);
+}
+
+/* ===== HORIZONTAL RULE ===== */
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-gray-200);
+  margin: var(--space-xl) 0;
+}
+
+/* ===== FOCUS VISIBLE (Accesibilidad) ===== */
+
+*:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 2px;
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ===== TEXT COLORS ===== */
+
+.text-primary {
+  color: var(--color-navy);
+}
+
+.text-secondary {
+  color: var(--color-gray-600);
+}
+
+.text-accent {
+  color: var(--color-cyan);
+}
+
+/* Cyan puro (#00d4ff) sobre blanco da 1.77:1 — no cumple WCAG AA (mínimo 3:1 en texto grande).
+   Usar esta variante, no .text-accent, para texto de acento sobre fondo claro. */
+.text-accent-on-light {
+  color: #0086a3;
+}
+
+.section-title-dashed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.section-title-dashed::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--color-cyan);
+  border-radius: var(--radius-full);
+}
+
+.text-success {
+  color: var(--color-success);
+}
+
+.text-error {
+  color: var(--color-error);
+}
+
+/* ===== BACKGROUND COLORS ===== */
+
+.bg-primary {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+.bg-secondary {
+  background-color: var(--color-gray-100);
+}
+
+.bg-accent {
+  background-color: var(--color-cyan-10);
+}
+
+/* ===== DISPLAY UTILITIES ===== */
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+}
+
+/* ===== MARGIN & PADDING UTILITIES ===== */
+
+.m-0 { margin: 0; }
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+
+.p-0 { padding: 0; }
+
+/* ===== OPACITY ===== */
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
