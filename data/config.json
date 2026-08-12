@@ -4,7 +4,7 @@
   "paquetes": {
     "basico": {
       "precio_mensual": 4500,
-      "minimo_meses": 12
+      "minimo_meses": 7
     },
     "profesional": {
       "precio_mensual": 12000,
