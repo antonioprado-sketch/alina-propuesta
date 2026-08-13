@@ -388,9 +388,9 @@ function openWhatsApp() {
   const paquete = PRICING_CONFIG.paquetes[cotizador_state.paquete_seleccionado];
 
   // Construir mensaje
-  let mensaje = '👋 Hola, me interesa la propuesta comercial de ADDV\n\n';
-  mensaje += `✅ *Paquete Seleccionado:*\n${paquete.nombre}\n\n`;
-  mensaje += `💬 *Cotización:*\n`;
+  let mensaje = '\u{1F44B} Hola, me interesa la propuesta comercial de ADDV\n\n';
+  mensaje += `\u2705 *Paquete Seleccionado:*\n${paquete.nombre}\n\n`;
+  mensaje += `\u{1F4AC} *Cotización:*\n`;
   mensaje += `Subtotal: ${formatPrice(calculo.subtotal)}\n`;
   mensaje += `IVA (16%): ${formatPrice(calculo.iva)}\n`;
   mensaje += `*Total: ${formatPrice(calculo.total)}* (${cotizador_state.meses} mes${cotizador_state.meses > 1 ? 'es' : ''})\n\n`;

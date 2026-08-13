@@ -35,18 +35,18 @@ function rastrearWhatsAppClick() {
  * @returns {string} Mensaje formateado
  */
 function generarMensajeWhatsApp(datos) {
-  let mensaje = '👋 Hola, me interesa los servicios de ADDV\n\n';
+  let mensaje = '\u{1F44B} Hola, me interesa los servicios de ADDV\n\n';
 
   if (datos.paquete) {
-    mensaje += `✅ *Paquete:* ${datos.paquete}\n`;
+    mensaje += `\u2705 *Paquete:* ${datos.paquete}\n`;
   }
 
   if (datos.total) {
-    mensaje += `💬 *Total:* ${formatPrice(datos.total)} MXN\n`;
+    mensaje += `\u{1F4AC} *Total:* ${formatPrice(datos.total)} MXN\n`;
   }
 
   if (datos.consulta) {
-    mensaje += `\n❓ *Mi consulta:*\n${datos.consulta}\n`;
+    mensaje += `\n\u2753 *Mi consulta:*\n${datos.consulta}\n`;
   }
 
   mensaje += `\nMe gustaría conocer más detalles.`;
