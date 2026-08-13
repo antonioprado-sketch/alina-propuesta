@@ -38,15 +38,15 @@ function generarMensajeWhatsApp(datos) {
   let mensaje = '👋 Hola, me interesa los servicios de ADDV\n\n';
 
   if (datos.paquete) {
-    mensaje += `📦 *Paquete:* ${datos.paquete}\n`;
+    mensaje += `✅ *Paquete:* ${datos.paquete}\n`;
   }
 
   if (datos.total) {
-    mensaje += `💰 *Total:* ${formatPrice(datos.total)} MXN\n`;
+    mensaje += `💬 *Total:* ${formatPrice(datos.total)} MXN\n`;
   }
 
   if (datos.consulta) {
-    mensaje += `\n📝 *Mi consulta:*\n${datos.consulta}\n`;
+    mensaje += `\n❓ *Mi consulta:*\n${datos.consulta}\n`;
   }
 
   mensaje += `\nMe gustaría conocer más detalles.`;
